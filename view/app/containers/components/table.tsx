@@ -83,10 +83,10 @@ const ContainersTable = ({
 
                             const hasPorts = container.ports && container.ports.length > 0;
                             const formattedDate = container.created
-                                ? new Intl.DateTimeFormat(undefined, { day: 'numeric', month: 'long' }).format(
-                                    new Date(parseInt(container.created) * 1000)
-                                )
-                                : '-';
+                            ? new Intl.DateTimeFormat('en-US', { month: 'short', day: '2-digit', year: 'numeric' }).format(
+                             new Date(parseInt(container.created) * 1000)
+                  )
+                         : '-';
 
                             return (
                                 <TableRow key={container.id} onClick={() => router.push(`/containers/${container.id}`)}
