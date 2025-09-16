@@ -220,10 +220,6 @@ Add any other context about the problem here.`;
               <HelpCircle />
               {t('user.menu.help')}
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={handleReportIssue}>
-              <AlertCircle />
-              {t('user.menu.reportIssue')}
-            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={handleLogout}>
               <LogOut />
@@ -232,6 +228,17 @@ Add any other context about the problem here.`;
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>
+  
+      {/* Bottom-anchored "Report Issue" action */}
+      <div className="mt-auto p-4">
+        <button
+          onClick={handleReportIssue}
+          className="flex items-center gap-2 text-sm text-sidebar-foreground hover:text-sidebar-accent"
+        >
+          <AlertCircle />
+          {t('user.menu.reportIssue')}
+        </button>
+      </div>
     </SidebarMenu>
   );
 }

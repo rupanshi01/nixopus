@@ -151,7 +151,7 @@ export function AppSidebar({
   }
 
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar className="sidebar" collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher refetch={refetch} />
       </SidebarHeader>
