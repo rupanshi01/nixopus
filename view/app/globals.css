@@ -524,9 +524,4 @@
   }
 }
 
-/* Ensure the sidebar supports bottom anchoring */
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Full height of the viewport */
-}
+

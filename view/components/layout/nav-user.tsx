@@ -229,16 +229,19 @@ Add any other context about the problem here.`;
         </DropdownMenu>
       </SidebarMenuItem>
   
-      {/* Bottom-anchored "Report Issue" action */}
-      <div className="mt-auto p-4">
-        <button
-          onClick={handleReportIssue}
-          className="flex items-center gap-2 text-sm text-sidebar-foreground hover:text-sidebar-accent"
-        >
-          <AlertCircle />
-          {t('user.menu.reportIssue')}
-        </button>
-      </div>
+       {/* Bottom-aligned actions */}
+       <SidebarMenuItem className="mt-auto" onClick={handleSponsor}>
+        <Heart className="text-red-500" />
+        {t('user.menu.sponsor')}
+      </SidebarMenuItem>
+      <SidebarMenuItem onClick={handleHelp}>
+        <HelpCircle />
+        {t('user.menu.help')}
+      </SidebarMenuItem>
+      <SidebarMenuItem onClick={handleReportIssue}>
+        <AlertCircle />
+        {t('user.menu.reportIssue')}
+      </SidebarMenuItem>
     </SidebarMenu>
   );
 }

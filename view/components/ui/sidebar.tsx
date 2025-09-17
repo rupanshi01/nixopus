@@ -431,12 +431,13 @@ function SidebarGroupContent({ className, ...props }: React.ComponentProps<'div'
   );
 }
 
+// Ensure the sidebar supports bottom anchoring
 function SidebarMenu({ className, ...props }: React.ComponentProps<'ul'>) {
   return (
     <ul
       data-slot="sidebar-menu"
       data-sidebar="menu"
-      className={cn('flex w-full min-w-0 flex-col gap-1', className)}
+      className={cn('flex w-full min-w-0 flex-col gap-1', className)} // Already supports flex-column
       {...props}
     />
   );
